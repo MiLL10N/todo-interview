@@ -21,7 +21,6 @@ export default function TodoList({
   return (
     <View>
       <Text style={{ marginBottom: 10 }}>
-        {" "}
         Total completed: {todos.filter((todo) => todo.done).length}
       </Text>
       <FlatList
