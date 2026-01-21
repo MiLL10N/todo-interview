@@ -1,4 +1,4 @@
-# Welcome to your To-Do List 👋
+# Welcome to the application To-Do List 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
