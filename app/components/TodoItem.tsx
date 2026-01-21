@@ -22,6 +22,9 @@ export default function TodoList({
           onToggle(todo.id);
         }}
       />
+      <Text style={styles.date}>
+        {new Date(todo.createdDate).toLocaleString()}
+      </Text>
       <TouchableOpacity onPress={() => onRemove(todo.id)}>
         <Text style={styles.remove}>✕</Text>
       </TouchableOpacity>
