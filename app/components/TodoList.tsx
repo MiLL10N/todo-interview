@@ -19,17 +19,12 @@ export default function TodoList({
   }
 
   return (
-    <View>
-      <Text style={{ marginBottom: 10 }}>
-        Total completed: {todos.filter((todo) => todo.done).length}
-      </Text>
-      <FlatList
-        data={todos}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <TodoItem todo={item} onRemove={onRemove} onToggle={onToggle} />
-        )}
-      />
-    </View>
+    <FlatList
+      data={todos}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+        <TodoItem todo={item} onRemove={onRemove} onToggle={onToggle} />
+      )}
+    />
   );
 }
