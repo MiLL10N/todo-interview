@@ -12,19 +12,25 @@ export default function TodoList({
 }) {
   if (todos.length === 0) {
     return (
-      <View style={{ alignItems: "center", marginTop: 20 }}>
+      <View style={{ alignItems: "center", marginTop: 10 }}>
         <Text>No todos yet</Text>
       </View>
     );
   }
 
   return (
-    <FlatList
-      data={todos}
-      keyExtractor={(item) => item.id}
-      renderItem={({ item }) => (
-        <TodoItem todo={item} onRemove={onRemove} onToggle={onToggle} />
-      )}
-    />
+    <View>
+      <Text style={{ marginBottom: 10 }}>
+        {" "}
+        Total completed: {todos.filter((todo) => todo.done).length}
+      </Text>
+      <FlatList
+        data={todos}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <TodoItem todo={item} onRemove={onRemove} onToggle={onToggle} />
+        )}
+      />
+    </View>
   );
 }
