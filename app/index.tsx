@@ -66,6 +66,11 @@ export default function Index() {
         <Text style={[styles.title]}>To-Do List</Text>
       </View>
       <AddTodo onAdd={add}></AddTodo>
+      {todos.length > 0 && (
+        <Text style={{ color: "gray" }}>
+          {todos.filter((t) => !t.done).length} tasks remaining
+        </Text>
+      )}
       <TodoList todos={todos} onRemove={remove} onToggle={toggle} />
     </SafeAreaView>
   );
